@@ -1,171 +1,641 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aqoid</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+/* Reset dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-    <header class="header">
-        <img src="Aqoid.png" alt="Logo" class="logo">
-        <h1></h1>
-        <p class="header-text">AQOID</p> <!-- Header biasa, tidak fixed -->
-    </header>
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+}
 
-    <nav>
-        <ul>
-            <li><a href="index.html" class="active">Beranda</a></li>
-            <li><a href="materi.html">Materi</a></li>
-            <li><a href="kajian.html">Kajian</a></li>
-            <li><a href="kontak.html">Kontak</a></li>
-        </ul>
-    </nav>
-    <h2 class="mtri1">Pondasi Utama Kebangkitan Umat Islam</h2>
-    <section id="attention">
-        <h2 style="margin-bottom: 10px;">Mengapa Kita Perlu Membahas Aqidah Lagi?</h2>
-        <p style="margin-bottom: 20px;">Banyak umat Islam hari ini yang mengalami kemunduran dan keterpurukan. Mengapa demikian? Beberapa alasan utama:</p>
-        <ul>
-            <li>Tidak memahami makna aqidah yang sesungguhnya.</li>
-            <li>Islam hanya sebatas warisan, Islam KTP, atau Islam "kebetulan".</li>
-            <li>Belum memahami kebenaran Islam secara mendalam.</li>
-            <li>Mudah dimurtadkan karena kurangnya pemahaman.</li>
-            <li>Beranggapan bahwa semua agama itu benar.</li>
-            <li>Mengalami kemunduran di berbagai aspek kehidupan.</li>
-            <li>Mudah dijajah secara pemikiran dan budaya.</li>
-            <li>Terpuruk dalam berbagai bidang, baik ekonomi, politik, maupun sosial.</li>
-            <li>Tertindas di berbagai belahan dunia.</li>
-            <li>Seperti buih di lautan, banyak tapi tidak memiliki kekuatan.</li>
-            <li>Menderita penyakit <strong>wahn</strong>: cinta dunia dan takut mati.</li>
-            <li>Umat Islam perlu <strong>DIBANGKITKAN!</strong>!</li>
-        </ul>
-    </section>
+/* Header */
+header {
+    background-color: #19302e;
+    color: white;
+    padding: 14px;
+    text-align: center;
+}
+
+/* Menu Navigasi */
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    background:#c6d5ca;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    display: block;
+    padding: 12px 20px;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    transition: background 0.3s ease-in-out;
+}
+
+/* Hover dan Aktif */
+nav ul li a:hover {
+    background: #1abc9c;
+}
+
+nav ul li a.active {
+    background: #c59e2d;
+    color: black;
+}
+
+/* Judul */
+h1, h2 {
+    color: #2c3e50;
+}
+
+/* Bagian Konten */
+section {
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Daftar */
+ul {
+    list-style-type: square;
+    padding-left: 20px;
+}
+
+/* Kutipan */
+blockquote {
+    background: #ecf0f1;
+    padding: 15px;
+    border-left: 5px solid #2c3e50;
+    font-style: italic;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background:#19302e;
+    color: white;
+    margin-top: 20px;
+}
+
+footer .social-links {
+    margin-top: 10px;
+  }
+  
+  footer .social-links a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 1.2rem;
+  }
+  
+  footer .social-links a:hover {
+    text-decoration: underline;
+  }
+
+/* Tambahan teks di atas menu */
+.header-text {
+    text-align: center;
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 0px;
+    margin-top: 10px;
+    color: #f7931E; /* Warna emas agar mencolok */
+    line-height: 1.2; /* Mengurangi jarak antar baris */
+}
+
+nav ul li a {
+    display: block;
+    padding: 5px 18px;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    transition: 0s;
+    border-radius: 180px; /* Tambahkan border-radius */
+    max-width: 100%;
+    font-size: 16px; /* Sesuaikan dengan ukuran font yang diinginkan */
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap; /* Mencegah overflow */
+    justify-content: center;
+    gap: 7px; /* Atur jarak antar menu */
+    margin-bottom: 20px;
+    max-width: 100%;
+}
+
+nav ul li a:hover {
+    background: #d8e1db;
+    color:#000000;
+    border-radius: 0px; /* Agar tetap membulat saat hover */
+    box-shadow: inset 0 4px 6px #0000003f; /* Tambahkan efek bayangan */
+}
+
+/* Border-radius untuk menu aktif */
+nav ul li a.active {
+    background:#c6d5ca;
+    color: rgb(0, 0, 0);
+    border-radius: 0px; /* Atas kiri 0, atas kanan 0, bawah kanan 20px, bawah kiri 20px */    
+    box-shadow: inset 0px 10px 6px #00000079; /* Tambahkan efek bayangan */
+    text-shadow: 2px 2px 4px #00000079;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 10px; /* Jarak antar elemen */
+    padding-bottom: 30px; /* Jarak di bagian bawah container */
+    padding-top: 20px;
+    max-width: 100%;
+}
+
+.column {
+    background: #ffffff; /* Tambahkan warna latar belakang */
+    padding: 20px;
+    border-radius: 8px; /* Tambahkan border-radius agar lebih menarik */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Tambahkan efek bayangan */
+}
+
+#Desire {
+    background: transparent; /* Membuat latar belakang transparan */
+    box-shadow: none; /* Menghapus shadow */
+}
+
+#Action {
+    margin-bottom: 70px;
+}
+
+#attention {
+    margin-top: 39px;
+}
+
+#materi {
+    margin-top: 39px;
+    margin-bottom: 10px;
+}
+
+#materi2 {
+    margin-bottom: 10px;
+}
+
+#materi3 {
+    margin-bottom: 10px;
+}
+
+#materi4 {
+    margin-bottom: 100px;
+}
+
+#kajian1 {
+    margin-top: 19px;
+    margin-bottom: 250px;
+    background-color: transparent;
+    box-shadow: none;
+}
+
+#kontak {
+    margin-top: 70px;
+    margin-bottom: 250px;
+}
+
+/* Styling Form */
+#kontak form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%; /* Form memenuhi lebar container */
+    padding: 10px; /* Menambahkan sedikit padding di dalam form */
+    box-sizing: border-box; /* Agar padding tidak menambah ukuran total form */
+}
+
+
+#kontak input,
+#kontak textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    font-size: 16px;
+}
+#kontak form :hover{
+    box-shadow: inset 0 10px 6px rgba(0, 0, 0, 0.103);
+}
+
+
+#kontak form input:focus,
+#kontak form textarea:focus {
+    outline: none;
+    box-shadow: inset 1px 10px 6px rgba(0, 0, 0, 0.192);
+    text-shadow: 0 5px 6px rgba(0, 0, 0, 0.192);
+}
+
+#kontak textarea {
+    min-height: 120px; /* Ukuran textarea lebih besar */
+    resize: vertical; /* Izinkan pengguna mengubah ukuran */
+}
+
+#kontak button {
+    background-color: #19302e;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.2s ease-in-out;
+}
+
+#kontak button:hover {
+    background-color:#c6d5ca;
+    color: #000000;
+}
+
+/* styling umum untuk tombol */
+.my-button {
+    display:inline-block; /* Agar jarak bisa diletakkan bersebelahan dengan elemen lain */
+    padding: 7px 18px; /* Jarak dalam tombol */
+    background-color: #19302e; /* Warna latar belakang */
+    color: white; /* Warna teks */
+    font-size: 14px; /* ukuran font */
+    text-decoration: none; /* Hilangkan garis bawah jika menggunakan <a> */
+    border: none; /* tidak ada border */
+    border-radius: 5px; /* sudut tombol membulat */
+    cursor: pointer; /* Menampilkan kursor pointer saat hover */
+    transition: background-color 0.3s ease; /* Efek transisi saat hover */
+    margin-top: 7px;
+}
+
+/* Efek hover */
+.my-button:hover {
+    background-color:#c6d5ca; /* Warna latar belakang saat hover */
+    color: #000000;
+}
+
+#scrollBtn {
+    display: none; /* Sembunyikan tombol saat halaman di bawah */
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    z-index: 99;
+    background-color:#c59e2d;
+    color:#19302e;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 8px 12px;
+    padding-top: 11px;
+    border-radius:4px;
+    font-size: 25px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background 0.4s; 
+}
+
+#scrollBtn:hover {
+    border-radius: 50px;
+    transition: border-radius 0.4s;
+    background-color: #c6d5ca; /* Warna lebih gelap saat hover */
+    color:#19302e
     
+}
 
-    <section id="interest1">
-        <h2></h2>
-        <p>Allah SWT berfirman:</p>
-        <blockquote>
-            <em>“Kamu adalah umat yang terbaik yang dilahirkan untuk manusia, menyuruh kepada
-                yang ma'ruf, dan mencegah dari yang munkar, dan beriman kepada Allah”
-                </em> (QS. AliImran: 110).
-        </blockquote>
-    </section>
+.column1 {
+    background: #ffffff; /* Tambahkan warna latar belakang */
+    padding: 20px;
+    border-radius: 8px; /* Tambahkan border-radius agar lebih menarik */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Tambahkan efek bayangan */
+}
+.column1:hover {
+    background-color:#ffffff;
+    color: #000000;
 
-    <section id="interest">
-        <h2>Mengapa Umat Islam Bisa Terpuruk?</h2>
-        <p>Marilah kita mengkajinya lebih dalam. Allah SWT telah memperingatkan dalam Al-Qur’an:</p>
-        <blockquote>
-            <em>“Dan sesungguhnya Kami jadikan untuk isi neraka Jahannam kebanyakan dari jin dan manusia, mereka mempunyai hati, tetapi tidak digunakan untuk memahami, mereka mempunyai mata tetapi tidak digunakan untuk melihat, dan mereka mempunyai telinga tetapi tidak digunakan untuk mendengar. Mereka itu seperti binatang ternak, bahkan lebih sesat lagi. Mereka itulah orang-orang yang lalai”</em> (QS. Al-A’raf: 179).
-        </blockquote>
-        <p>Umat Islam mengalami kemunduran karena banyak yang:</p>
-        <ul>
-            <li>Tidak memahami dengan hati.</li>
-            <li>Tidak melihat dengan mata batinnya</li>
-            <li>Tidak mendengar kebenaran.</li>
-        </ul>
-        <p>Sehingga mereka disamakan dengan binatang ternak</p>
-    </section>
+}
 
-    <section id="Desire">
-        <div class="container">
-            <h2>Menjadi Manusia Sejati atau Manusia Jadi-Jadian?</h2>
-            <p>Ada dua jenis manusia:</p>
-            <div class="grid">
-                <div class="column">
-                    <h3>Manusia Sejati</h3>
-                    <p>Dipimpin oleh <strong>akal</strong></p>
-                </div>
-                <div class="column">
-                    <h3>Manusia Jadi-Jadian</h3>
-                    <p>Dipimpin oleh <strong>nafsu</strong></p>
-                </div>
-            </div>
-            <p>Apa bedanya manusia dengan binatang?</p>
-            <div class="grid">
-                <div class="column">
-                    <h3>Manusia</h3>
-                    <p>Jika hanya mengikuti nafsunya tanpa akal, maka ia lebih rendah dari
-                        binatang</p>
-                </div>
-                <div class="column">
-                    <h3>Binatang</h3>
-                    <p> Bertindak hanya untuk memenuhi nafsunya</p>
-                </div>
-            </div>
-            <p>Contoh sederhana:</p>
-            <p>Jika sapi butuh makan, ia hanya makan rumput secukupnya.<font color="#802d19"><strong>Tapi manusia?</strong></font> Bisa merusak seluruh hutan, mengeksploitasi gunung, bahkan menimbulkan kehancuran.</p>
-            <p style="margin-top: 20px;">Manusia tidak akan bergerak jika ia tidak berpikir. Maka pertanyaannya:</p>
-            <ul>
-                <li>Dari mana saya hidup?</li>
-                <li>Untuk apa saya hidup?</li>
-                <li>Akan ke mana setelah saya hidup?</li>
-            </ul>
-            <p>Jawaban atas pertanyaan ini akan menentukan arah kehidupan seseorang. Tanpa jawaban yang benar, manusia akan kehilangan arah dan hidup dalam ke sia-siaan.</p>
-        </div>
-    </section>
 
-    <section id="Action">
-        <div class="container">
-            <h2 style="margin-bottom: 20px;">Aqidah adalah Pondasi Kehidupan</h2>
-            <p>Ketika seseorang mendapatkan jawaban yang benar, ia akan:</p>
-            <ul>
-                <li>Bangkit dari keterpurukan</li>
-                <li>Bersemangat menjalani hidup dengan visi yang jelas</li>
-                <li>Melihat dunia dengan terang benderang</li>
-            </ul>
-            <p> Jawaban atas pertanyaan mendasar tersebut akan menjadi pengikat:</p>
-            <ul><strong>
-                <li>Seluruh pemikirannya</li>
-                <li>Seluruh perasannya</li>
-                <li>Seluruh perbuatannya</li>
-            </strong>    
-            </ul>
-            <p style="margin-bottom: 20px;">Jawaban ini disebut <strong>AQIDAH</strong>. Aqidah inilah yang menjadi <strong>PONDASI</strong> bagi kehidupan seorang Muslim.</p>
-            <p>Jika aqidahnya benar, maka:</p>
-            <ul>
-                <li>Pemikirannya akan benar</li>
-                <li>Perbuatannya akan benar</li>
-                <li>Perasaannya akan benar</li>
-            </ul>
-            <p style="margin-top: 5px">Namun, jika aqidahnya salah, maka segala aspek kehidupannya akan menyimpang. Oleh karena itu, kita <strong>tidak bisa main-main dalam membangun pondasi ini!</strong></p>
-            <p>Mari kita kuatkan aqidah kita agar umat Islam kembali bangkit dan menjadi <strong>umat terbaik</strong> seperti yang dijanjikan oleh Allah SWT.</p>
+.column2 {
+    background: #ffffff; /* Tambahkan warna latar belakang */
+    padding: 20px;
+    border-radius: 8px; /* Tambahkan border-radius agar lebih menarik */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Tambahkan efek bayangan */
+    margin: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
 
-        </section>
+@media (max-width: 768px) {
+    section {
+        width: 95%; /* Mengurangi margin kiri dan kanan pada layar kecil */
+        padding: 15px; /* Menyesuaikan padding agar tidak terlalu besar */
+    }
+
+    .grid {
+        grid-template-columns: 1fr; /* Mengubah grid menjadi satu kolom di layar kecil */
+    }
+
+    .column, .column1 {
+        padding: 15px;
+    }
+}
+h2 {
+    line-height: 1.2; /* Mengurangi jarak antar baris */
+}
+
+@media (max-width: 768px) {
+    #attention {
+        margin-top: 35px;
+
+    }
+    #kontak {
+        margin-top: 35px;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        overflow-x:hidden;
+    }
+}
+
+@media (max-width: 768px) {
+    nav ul li a {
+        padding: 5px 10px;
+        gap: 3px;
+    }
+
+}
+
+.mtri {
+    margin-top: 60px;
+    text-align: center;
+}
+@media (max-width: 768px) {
+    .mtri {
+        margin-top: 10px;
+    }
+    #kajian1 {
+        margin-top: 10px; !important
+    }
+}
+
+
+@media (max-width: 768px){
+    .column2 {
+        text-align: center;
+    }
+    #kajian1 {
+        padding: 0;
+        margin: 0;
+    }
+    .kjian {
+        margin-bottom: 39px;
+    }
+}
+
+.mtri {
+    margin-top: 30px;
+}
+
+.kjian {
+    margin-top: 30px;
+}
+#kajian1 {
+    justify-content: center; /* Rata tengah horizontal */
+    align-items: center; /* Rata tengah vertikal */
+}
+
+
+.mtri1 {
+    margin-top: 30px;
+    text-align: center;
+}
+@media (max-width: 768px) {
+    .mtri1 {
+        margin-top: 10px;
+        margin-left: 20px;
+        margin-right: 20px;
+
+    }
+    #kajian1 {
+        margin-top: 10px; !important
+    }
+}
+
+
+@media (max-width: 768px) {
+    .grid {
+        margin: 10px;
+    }
+    .column {
+        margin-bottom: 15px;
+    }
+}
+
+
+.grid1 {
+    display: flex;
+    flex-wrap: wrap; /* Agar responsif */
+    justify-content: center; /* Pastikan semua item berada di tengah */
+    gap: 10px; /*jarak antar elemen */
+    width: 100%;
+    max-width: 1050px; /* Sesuaikan dengan ukuran yang diinginkan */
+
+}
+
+.column1 {
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 32%; /* Pastikan mengikuti ukuran parent */
+    max-width: 350px; /* Bisa disesuaikan */
+    text-align: center; /* Rata tengah teks */
+    margin: 0 auto; /* Pastikan elemen rata tengah */
+}
+
+
+#kajian-grid {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+
+#kajian1 {
+    display: flex; /* Tambahkan */
+    justify-content: center; /* Rata tengah horizontal */
+    align-items: center; /* Rata tengah vertikal */
+    flex-direction: column; /* Susun ke bawah */
+    text-align: center; /* Rata tengah isi */
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .grid1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Pastikan elemen berada di tengah */
+    }
+
+    .column1 {
+        width: 90%; /* Atur agar tidak terlalu kecil di layar kecil */
+        width: 100%;
+        margin-bottom: 15px;
+    }
+}
+
+.kjian {
+    text-align: center;
+    margin-top: 30px; !important
+}
+
+.pertanyaan {
+    text-align: center;
+    margin-top: 10px;
+}
+.pertanyaan1 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+
+@media (max-width: 768px) {
+    .pertanyaan {
+        text-align: center;
+        margin-top: 15px;
+    }
+    .pertanyaan1 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+}
+@media (max-width: 768px) {
+    #kontak form{
+        margin-bottom: 10px;
+
+    }
+    #kajian1{
+        margin-bottom: 100px;
+    }
+}
+
+.logo {
+    width: 37px; /* Sesuaikan ukuran lebar */
+    height: auto; /* Biarkan tinggi mengikuti proporsi */
+}
+
+.header-text {
+    margin-top: 0; /* Pastikan tidak ada margin atas yang berlebihan */
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    justify-content: center; /* tengah desktop */
+    padding: 15px;
+}
+
+@media (max-width: 768px) {
+    .header {
+    justify-content: flex-start; /* tengah desktop */
+    padding: 13px;
+    padding-left: 15px;
+    }
+
+}
+
+    /* Bungkus semua konten di dalam satu div */
+    .content-container {
+        filter: blur(5px); /* Blur hanya di latar belakang */
+        transition: filter 0.3s ease;
+    }
     
-   
+    /* Saat login berhasil, hilangkan blur */
+    .content-container.active {
+        filter: none;
+    }
+    
+    /* Pop-up tetap jelas */
+    .popup-container {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: white;
+        padding: 20px;
+        z-index: 9999;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+        border-radius: 10px;
+    }
 
-    <footer>
-        <p>© 2025 Aqoid | copyright</p>
-        <div class="social-links">
-            <a href="https://www.facebook.com/NAMA_HALAMAN" target="_blank">Facebook</a>
-            <a href="https://www.instagram.com/NAMA_AKUN" target="_blank">Instagram</a>
-            <a href="https://www.youtube.com/c/NAMA_CHANNEL" target="_blank">YouTube</a>
-        </div>        
-    </footer>
-    <button onclick="scrollToTop()" id="scrollBtn" title="ke atas">
-        <i class="fa-solid fa-circle-up"></i>
-    </button>
-    <script>
-        // Tampilkan tombol saat scroll ke bawah
-        window.onscroll = function() {scrollFunction()};
-    
-        function scrollFunction() {
-            var scrollBtn = document.getElementById("scrollBtn");
-            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-                scrollBtn.style.display = "block";
-            } else {
-                scrollBtn.style.display = "none";
-            }
-        }
-    
-        // Fungsi scroll ke atas saat tombol diklik
-        function scrollToTop() {
-            window.scrollTo({top: 0, behavior: 'smooth'});
-        }
-    </script>
-    
-</body>
-</html>
+input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 16px;
+    transition: all 0.3s ease-in-out;
+}
+
+input[type="text"]:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+}
+
+
+button {
+    width: 100%;
+    background-color: #007bff; /* warna biru */
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #0056b3; /* warna biru lebih gelap saat hover */
+    transform: scale(1.05);
+}
+
+button:active {
+    background-color: #004494; /* warna lebih gelap saat diklik */
+    transform: scale(0.98);
+} 
+
+.popup {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}

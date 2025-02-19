@@ -769,7 +769,7 @@ body {
 /* Responsive untuk Mobile */
 @media (max-width: 768px) {
     .column1 {
-        flex: 0 0 calc(0% - 15px); /* Setiap kolom mengambil 50% dari lebar container pada layar kecil */
+        flex: 0 0 calc(40% - 15px); /* Setiap kolom mengambil 50% dari lebar container pada layar kecil */
     }
 
     .carousel-btn {

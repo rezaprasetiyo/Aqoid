@@ -1,0 +1,793 @@
+/* Reset dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Header */
+header {
+    background-color: #19302e;
+    color: white;
+    padding: 14px;
+    text-align: center;
+}
+
+/* Menu Navigasi */
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    background:#f7931E;
+    position: relative; /* Default */
+    transition: top 0.3s ease; /* Untuk animasi ketika posisi berubah */
+}
+
+nav ul.fixed {
+    position: fixed;
+    top: 0; /* Memastikan berada di atas halaman*/
+    left: 0;
+    right: 0;
+    z-index: 1000; /* Pastikan berada di atas konten lain */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Tambahkan bayangan agar lebih menonjol */
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    display: block;
+    padding: 12px 20px;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    transition: background 0.3s ease-in-out;
+}
+
+/* Hover dan Aktif */
+nav ul li a:hover {
+    background: #1abc9c;
+}
+
+nav ul li a.active {
+    background: #c59e2d;
+    color: black;
+}
+
+/* Judul */
+h1, h2 {
+    color: #2c3e50;
+}
+
+/* Bagian Konten */
+section {
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Daftar */
+ul {
+    list-style-type: square;
+    padding-left: 20px;
+}
+
+/* Kutipan */
+blockquote {
+    background: #ecf0f1;
+    padding: 15px;
+    border-left: 5px solid #2c3e50;
+    font-style: italic;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background:#19302e;
+    color: white;
+    margin-top: 20px;
+}
+
+footer .social-links {
+    margin-top: 10px;
+  }
+  
+  footer .social-links a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 1.2rem;
+  }
+  
+  footer .social-links a:hover {
+    text-decoration: underline;
+  }
+
+/* Tambahan teks di atas menu */
+.header-text {
+    text-align: center;
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 0px;
+    margin-top: 10px;
+    color: #f7931E; /* Warna emas agar mencolok */
+    line-height: 1.2; /* Mengurangi jarak antar baris */
+}
+
+nav ul li a {
+    display: block;
+    padding: 5px 18px;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    transition: 0s;
+    border-radius: 180px; /* Tambahkan border-radius */
+    max-width: 100%;
+    font-size: 16px; /* Sesuaikan dengan ukuran font yang diinginkan */
+}
+
+
+nav a {
+    font-weight: 500;
+}
+
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap; /* Mencegah overflow */
+    justify-content: center;
+    gap: 7px; /* Atur jarak antar menu */
+    margin-bottom: 20px;
+    max-width: 100%;
+}
+
+nav ul li a:hover {
+    background: #ffe6c9;
+    color:#000000;
+    border-radius: 0px; /* Agar tetap membulat saat hover */
+    box-shadow: inset 0 4px 6px #0000003f; /* Tambahkan efek bayangan */
+}
+
+/* Border-radius untuk menu aktif */
+nav ul li a.active {
+    background:#f7f7f7ea;
+    color: rgb(0, 0, 0);
+    border-radius: 0px; /* Atas kiri 0, atas kanan 0, bawah kanan 20px, bawah kiri 20px */    
+    box-shadow: inset 0px 10px 6px #00000079; /* Tambahkan efek bayangan */
+    text-shadow: 2px 2px 4px #00000079;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 10px; /* Jarak antar elemen */
+    padding-bottom: 30px; /* Jarak di bagian bawah container */
+    padding-top: 20px;
+    max-width: 100%;
+}
+
+.column {
+    background: #ffffff; /* Tambahkan warna latar belakang */
+    padding: 20px;
+    border-radius: 8px; /* Tambahkan border-radius agar lebih menarik */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Tambahkan efek bayangan */
+}
+
+#Desire {
+    background: transparent; /* Membuat latar belakang transparan */
+    box-shadow: none; /* Menghapus shadow */
+}
+
+#Action {
+    margin-bottom: 70px;
+}
+
+#attention {
+    margin-top: 39px;
+}
+
+#materi {
+    margin-top: 39px;
+    margin-bottom: 10px;
+}
+
+#materi2 {
+    margin-bottom: 10px;
+}
+
+#materi3 {
+    margin-bottom: 10px;
+}
+
+#materi4 {
+    margin-bottom: 100px;
+}
+
+#kajian1 {
+    margin-top: 19px;
+    margin-bottom: 250px;
+    background-color: transparent;
+    box-shadow: none;
+}
+
+#kontak {
+    margin-top: 70px;
+    margin-bottom: 250px;
+}
+
+/* Styling Form */
+#kontak form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%; /* Form memenuhi lebar container */
+    padding: 10px; /* Menambahkan sedikit padding di dalam form */
+    box-sizing: border-box; /* Agar padding tidak menambah ukuran total form */
+}
+
+
+#kontak input,
+#kontak textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    font-size: 16px;
+}
+#kontak form :hover{
+    box-shadow: inset 0 10px 6px rgba(0, 0, 0, 0.103);
+}
+
+
+#kontak form input:focus,
+#kontak form textarea:focus {
+    outline: none;
+    box-shadow: inset 1px 10px 6px rgba(0, 0, 0, 0.192);
+    text-shadow: 0 5px 6px rgba(0, 0, 0, 0.192);
+}
+
+#kontak textarea {
+    min-height: 120px; /* Ukuran textarea lebih besar */
+    resize: vertical; /* Izinkan pengguna mengubah ukuran */
+}
+
+#kontak button {
+    background-color: #19302e;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.2s ease-in-out;
+}
+
+#kontak button:hover {
+    background-color:#f7931E;
+    color: #000000;
+}
+
+/* styling umum untuk tombol */
+.my-button {
+    display:inline-block; /* Agar jarak bisa diletakkan bersebelahan dengan elemen lain */
+    padding: 7px 18px; /* Jarak dalam tombol */
+    background-color: #19302e; /* Warna latar belakang */
+    color: white; /* Warna teks */
+    font-size: 14px; /* ukuran font */
+    text-decoration: none; /* Hilangkan garis bawah jika menggunakan <a> */
+    border: none; /* tidak ada border */
+    border-radius: 5px; /* sudut tombol membulat */
+    cursor: pointer; /* Menampilkan kursor pointer saat hover */
+    transition: background-color 0.3s ease; /* Efek transisi saat hover */
+    margin-top: 7px;
+}
+
+/* Efek hover */
+.my-button:hover {
+    background-color:#f7931E; /* Warna latar belakang saat hover */
+    color: #000000;
+}
+
+#scrollBtn {
+    display: none; /* Sembunyikan tombol saat halaman di bawah */
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    z-index: 99;
+    background-color:#f7931E;
+    color:#19302e;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 8px 12px;
+    padding-top: 10px;
+    border-radius:4px;
+    font-size: 25px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background 0.4s; 
+}
+
+#scrollBtn:hover {
+    border-radius: 50px;
+    transition: border-radius 0.4s;
+    background-color: #c6d5ca; /* Warna lebih gelap saat hover */
+    color:#19302e
+    
+}
+
+.column1 {
+    background: #ffffff; /* Tambahkan warna latar belakang */
+    padding: 20px;
+    border-radius: 8px; /* Tambahkan border-radius agar lebih menarik */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Tambahkan efek bayangan */
+}
+.column1:hover {
+    background-color:#ffffff;
+    color: #000000;
+
+}
+
+
+.column2 {
+    background: #ffffff; /* Tambahkan warna latar belakang */
+    padding: 20px;
+    border-radius: 8px; /* Tambahkan border-radius agar lebih menarik */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Tambahkan efek bayangan */
+    margin: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+@media (max-width: 768px) {
+    section {
+        width: 95%; /* Mengurangi margin kiri dan kanan pada layar kecil */
+        padding: 15px; /* Menyesuaikan padding agar tidak terlalu besar */
+    }
+
+    .grid {
+        grid-template-columns: 1fr; /* Mengubah grid menjadi satu kolom di layar kecil */
+    }
+
+    .column, .column1 {
+        padding: 15px;
+    }
+}
+h2 {
+    line-height: 1.2; /* Mengurangi jarak antar baris */
+}
+
+@media (max-width: 768px) {
+    #attention {
+        margin-top: 35px;
+
+    }
+    #kontak {
+        margin-top: 35px;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        overflow-x:hidden;
+    }
+}
+
+@media (max-width: 768px) {
+    nav ul li a {
+        padding: 5px 10px;
+        gap: 3px;
+    }
+
+}
+
+.mtri {
+    margin-top: 60px;
+    text-align: center;
+}
+@media (max-width: 768px) {
+    .mtri {
+        margin-top: 10px;
+    }
+    #kajian1 {
+        margin-top: 10px; !important
+    }
+}
+
+
+@media (max-width: 768px){
+    .column2 {
+        text-align: center;
+    }
+    #kajian1 {
+        padding: 0;
+        margin: 0;
+    }
+    .kjian {
+        margin-bottom: 39px;
+    }
+}
+
+.mtri {
+    margin-top: 30px;
+}
+
+.kjian {
+    margin-top: 30px;
+}
+#kajian1 {
+    justify-content: center; /* Rata tengah horizontal */
+    align-items: center; /* Rata tengah vertikal */
+}
+
+
+.mtri1 {
+    margin-top: 30px;
+    text-align: center;
+}
+@media (max-width: 768px) {
+    .mtri1 {
+        margin-top: 10px;
+        margin-left: 20px;
+        margin-right: 20px;
+
+    }
+    #kajian1 {
+        margin-top: 10px; !important
+    }
+}
+
+
+@media (max-width: 768px) {
+    .grid {
+        margin: 10px;
+    }
+    .column {
+        margin-bottom: 15px;
+    }
+}
+
+
+.kajian-grid {
+    position: relative;
+    width: 100%;
+    overflow: hidden; /* Menyembunyikan overflow agar kolom tidak terlihat di luar batas */
+}
+
+.grid1 {
+    display: flex;
+    flex-wrap: nowrap; /* Membuat grid tetap dalam satu baris */
+    gap: 10px;
+    width: 100%;
+    transition: transform 0.3s ease; /* Untuk smooth scroll */
+}
+
+.column1 {
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 32%; /* Lebar kolom disesuaikan dengan tiga kolom yang akan terlihat */
+    max-width: 350px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.scroll-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 50%; /* Border bulat */
+    z-index: 10;
+    transition: background-color 0.3s ease;
+}
+
+.scroll-btn:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+#scrollLeft {
+    left: 10px; /* Posisi tombol kiri di ujung kiri */
+}
+
+#scrollRight {
+    right: 10px; /* Posisi tombol kanan di ujung kanan */
+}
+
+/* Tombol scroll akan muncul hanya ketika lebih dari 3 kolom */
+@media (max-width: 768px) {
+    .grid1 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .column1 {
+        width: 90%; /* Mengatur lebar kolom pada layar kecil */
+        margin-bottom: 15px;
+    }
+}
+
+
+.kjian {
+    text-align: center;
+    margin-top: 30px; !important
+}
+
+.pertanyaan {
+    text-align: center;
+    margin-top: 10px;
+}
+.pertanyaan1 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+
+@media (max-width: 768px) {
+    .pertanyaan {
+        text-align: center;
+        margin-top: 15px;
+    }
+    .pertanyaan1 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+}
+@media (max-width: 768px) {
+    #kontak form{
+        margin-bottom: 10px;
+
+    }
+    #kajian1{
+        margin-bottom: 100px;
+    }
+}
+
+.logo {
+    width: 37px; /* Sesuaikan ukuran lebar */
+    height: auto; /* Biarkan tinggi mengikuti proporsi */
+}
+
+.header-text {
+    margin-top: 0; /* Pastikan tidak ada margin atas yang berlebihan */
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    justify-content: center; /* tengah desktop */
+    padding: 15px;
+}
+
+@media (max-width: 768px) {
+    .header {
+    justify-content: flex-start; /* tengah desktop */
+    padding: 13px;
+    padding-left: 15px;
+    }
+
+}
+
+    /* Bungkus semua konten di dalam satu div */
+    .content-container {
+        filter: blur(5px); /* Blur hanya di latar belakang */
+        transition: filter 0.3s ease;
+    }
+    
+    /* Saat login berhasil, hilangkan blur */
+    .content-container.active {
+        filter: none;
+    }
+    
+    /* Pop-up tetap jelas */
+    .popup-container {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: #ffffff;
+        padding: 20px;
+        z-index: 9999;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+        border-radius: 10px;
+    }
+
+/* Input dalam popup */
+.popup input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 16px;
+    transition: all 0.3s ease-in-out;
+}
+
+.popup input[type="text"]:focus {
+    border-color: #19302e;
+    outline: none;
+    box-shadow: 0 0 8px rgba(25, 48, 46, 0.623);
+}
+
+/* Hanya tombol dalam popup */
+.popup .popup-button {
+    width: 100%;
+    background-color: #19302e;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.popup .popup-button:hover {
+    background-color: #f7931E;
+    color: #000000;
+}
+
+.popup .popup-button:active {
+    background-color: #f7931E;
+    color: #000000;
+}
+
+.popup {
+    background: none;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 300px;
+    animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+body {
+    background-image: linear-gradient(rgba(247, 247, 247, 0.877), rgba(247, 247, 247, 0.795)), url('Desain tanpa judul.webp'); /* Ganti dengan URL gambarmu */
+    background-size: cover; /* Menyesuaikan ukuran gambar */
+    background-position: center; /* Menengahkan gambar */
+    background-attachment: fixed; /* Agar gambar tetap saat discroll */
+    background-repeat: no-repeat; /* Mencegah pengulangan gambar */
+}
+
+
+.header {
+    background-image: url('headerd.webp');
+    background-size: cover;
+    background-position: bottom;
+}
+
+@media (max-width: 768px) {
+    .header {
+        background-image: url('headerm.webp') style="scale: 20";
+        background-size: 290%;
+        background-position: bottom;
+    }
+}
+
+
+/* Tambahkan gaya ini ke CSS Anda */
+
+.kajian-carousel {
+    position: relative;
+    width: 100%;
+    max-width: 1100px;
+    margin: auto;
+    overflow: hidden; /* Sembunyikan bagian yang tidak terlihat */
+    padding-bottom: 10px;
+}
+
+.kajian-wrapper {
+    display: flex;
+    overflow-x: auto; /* Ubah dari hidden ke auto */
+    scroll-behavior: smooth;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch; /* Supaya smooth di mobile */
+    padding-bottom: 10px;
+}
+
+.kajian-wrapper::-webkit-scrollbar {
+    display: none; /* Sembunyikan scrollbar */
+}
+
+.kajian-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* Pastikan transisi lancar */
+    gap: 15px;
+}
+
+.column1 {
+    flex: 0 0 calc(25% - 15px); /* Setiap kolom mengambil 25% dari lebar container */
+    box-sizing: border-box;
+    min-width: 250px; /* Pastikan ada lebar minimum */
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    padding: 15px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    transition: background-color 0.3s ease;
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.103)
+}
+
+#prev {
+    left: 10px; /* Sesuaikan posisi */
+}
+
+#next {
+    right: 10px; /* Sesuaikan posisi */
+}
+
+.carousel-btn:hover {
+    background-color: rgb(255, 255, 255);
+}
+
+/* Responsive untuk Mobile */
+@media (max-width: 768px) {
+    .column1 {
+        flex: 0 0 calc(24% - 15px); /* Setiap kolom mengambil 50% dari lebar container pada layar kecil */
+    }
+
+    .carousel-btn {
+        width: 35px;
+        height: 35px;
+        font-size: 16px;
+
+    }
+    #prev {
+        left: 13px;
+    }
+    #next {
+        right: 13px;
+    }
+}
+
+@media (max-width: 768px) {
+    .kajian-container {
+        padding-left: 13.5%; /* Menambahkan ruang di kiri */
+    }
+}

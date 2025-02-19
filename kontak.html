@@ -45,5 +45,25 @@
         </div>  
     </footer>
 
+
+<script>
+    // Mendapatkan elemen navigasi
+    const nav = document.querySelector('nav ul');
+
+    // Mendapatkan jarak dari atas untuk menu navigasi
+    const navOffset = nav.offsetTop;
+
+    // Fungsi untuk menangani perubahan scroll
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > navOffset) {
+            nav.classList.add('fixed'); // Menambahkan kelas fixed
+        } else {
+            nav.classList.remove('fixed'); // Menghapus kelas fixed
+        }
+    });
+</script>
+
+
+
 </body>
 </html>

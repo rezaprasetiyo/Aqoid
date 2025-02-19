@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aqoid</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header class="header">
+        <img src="Aqoid.png" alt="Logo" class="logo">
+        <h1></h1>
+        <p class="header-text">AQOID</p> <!-- Header biasa, tidak fixed -->
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="materi.html" class="active">Materi</a></li>
+            <li><a href="kajian.html">Kajian</a></li>
+            <li><a href="kontak.html">Kontak</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Materi Aqidah -->
+    <h2 class="mtri" style="text-align: center;">Materi Aqidah Islam</h2>
+    <section id="materi" class="section">
+        <div class="materi-grid">
+            <div class="materi-box">
+                <h3>Hakikat Aqidah Islam</h3>
+                <p>Aqidah Islam harus diyakini dengan dalil yang kuat, bukan sekadar warisan.</p>
+                <div class="more-content">
+                    <p></p>
+                </div>
+            </div>
+            <button class="my-button">Learn More</button>
+    </section>
+    <section id="materi2" class="section">
+            <div class="materi-box">
+                <h3>Tauhid sebagai Fondasi</h3>
+                <p>Menjaga keimanan kepada Allah dan menjauhi segala bentuk kesyirikan.</p>
+                <div class="more-content">
+                    <p></p>
+                </div>
+            </div>
+            <button class="my-button">Learn More</button>
+    </section>
+    <section id="materi3" class="section">
+            <div class="materi-box">
+                <h3>Islam Sebagai Jalan Hidup</h3>
+                <p>Islam tidak hanya tentang ibadah, tetapi juga sistem kehidupan.</p>
+                <div class="more-content">
+                    <p></p>
+                </div>
+            </div>
+            <button class="my-button">Learn More</button>
+    </section>
+    <section id="materi4" class="section">
+            <div class="materi-box">
+                <h3>Konsekuensi Iman</h3>
+                <p>Keimanan yang benar harus diterapkan dalam kehidupan sehari-hari.</p>
+                <div class="more-content">
+                    <p></p>
+                </div>
+            </div>
+        </div>
+        <button class="my-button">Learn More</button>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Aqoid | copyright</p>
+        <div class="social-links">
+            <a href="https://www.facebook.com/NAMA_HALAMAN" target="_blank">Facebook</a>
+            <a href="https://www.instagram.com/NAMA_AKUN" target="_blank">Instagram</a>
+            <a href="https://www.youtube.com/c/NAMA_CHANNEL" target="_blank">YouTube</a>
+        </div>  
+    </footer>
+
+
+<script>
+    // Mendapatkan elemen navigasi
+    const nav = document.querySelector('nav ul');
+
+    // Mendapatkan jarak dari atas untuk menu navigasi
+    const navOffset = nav.offsetTop;
+
+    // Fungsi untuk menangani perubahan scroll
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > navOffset) {
+            nav.classList.add('fixed'); // Menambahkan kelas fixed
+        } else {
+            nav.classList.remove('fixed'); // Menghapus kelas fixed
+        }
+    });
+</script>
+
+
+</body>
+</html>

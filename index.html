@@ -12,9 +12,10 @@
 <div class="popup-container" id="popup">
     <div class="popup">
         <h2>Masukkan ID Anda</h2>
+        <p style="font-size: 15px; line-height: 19px; margin-bottom: 5px; margin-top: 5px;">Mohon untuk memasukkan ID yang telah kami berikan sebelumnya</p>
         <input type="text" id="userId" placeholder="Masukkan ID Anda">
-        <br>
-        <button onclick="checkId()">Submit</button>
+        <br> 
+        <button class="popup-button" onclick="checkId()">Submit</button>
         <p id="errorMessage" style="color: red; display: none;">ID salah! Coba lagi.</p>
     </div>
 </div>
@@ -86,13 +87,13 @@
             <h2>Menjadi Manusia Sejati atau Manusia Jadi-Jadian?</h2>
             <p>Ada dua jenis manusia:</p>
             <div class="grid">
-                <div class="column">
-                    <h3>Manusia Sejati</h3>
-                    <p>Dipimpin oleh <strong>akal</strong></p>
+                <div class="column" style="background-image: url('intelligence-4234824_1280.jpg'); background-size: cover; background-position: center;">
+                    <h3 style="color: #ffffff">Manusia Sejati</style></h3>
+                    <p style="color: #ffffff">Dipimpin oleh <strong>akal</strong></p>
                 </div>
-                <div class="column">
-                    <h3>Manusia Jadi-Jadian</h3>
-                    <p>Dipimpin oleh <strong>nafsu</strong></p>
+                <div class="column" style="background-image: url('devil-2708544_1280.jpg'); background-size: cover; background-position: center;">
+                    <h3 style="color: #ffffff;">Manusia Jadi-Jadian</h3>
+                    <p style="color: #ffffff;">Dipimpin oleh <strong>nafsu</strong></p>
                 </div>
             </div>
             <p>Apa bedanya manusia dengan binatang?</p>
@@ -162,7 +163,7 @@
     </button>
 
     </div>
-    
+
     <script>
         // Tampilkan tombol saat scroll ke bawah
         window.onscroll = function() {scrollFunction()};
@@ -181,11 +182,14 @@
             window.scrollTo({top: 0, behavior: 'smooth'});
         }
 
-        const validIds = ["12345", "67890", "ABCDE"];
+        const validIds = ["12345", "67890", "ABCDE", "REZA1"];
 
-window.onload = function () {
+
+        window.onload = function () {
     const popupContainer = document.getElementById("popup");
     const content = document.getElementById("content");
+
+    console.log("Halaman dimuat. Status login:", sessionStorage.getItem("loggedIn"));
 
     if (!sessionStorage.getItem("loggedIn")) {
         popupContainer.style.display = "flex"; // Tampilkan popup
@@ -201,14 +205,39 @@ function checkId() {
     const content = document.getElementById("content");
 
     if (validIds.includes(userId)) {
+        console.log("Login berhasil dengan ID:", userId);
         sessionStorage.setItem("loggedIn", "true");
+
         document.getElementById("popup").style.display = "none"; 
         content.classList.add("active"); // Hilangkan blur setelah login
     } else {
+        console.log("Login gagal dengan ID:", userId);
         document.getElementById("errorMessage").style.display = "block";
     }
 }
 
+document.getElementById("userId").addEventListener("keypress", function(event){
+    if (event.key === "Enter") {
+        event.preventDefault(); // Mencegah aksi default form jika ada 
+        checkId(); // Memanggil fungsi checkId()
+    }
+});
+
+
+// Mendapatkan elemen navigasi
+const nav = document.querySelector('nav ul');
+
+// Mendapatkan jarak dari atas untuk menu navigasi
+const navOffset = nav.offsetTop;
+
+// Fungsi untuk menangani perubahan scroll
+window.addEventListener('scroll', function () {
+    if (window.scrollY > navOffset) {
+        nav.classList.add('fixed'); // Menambahkan kelas fixed
+    } else {
+        nav.classList.remove('fixed'); // Menghapus kelas fixed
+    }
+})
 
 
     </script>

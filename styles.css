@@ -138,6 +138,12 @@ nav ul li a {
     font-size: 16px; /* Sesuaikan dengan ukuran font yang diinginkan */
 }
 
+
+nav a {
+    font-weight: 500;
+}
+
+
 nav ul {
     display: flex;
     flex-wrap: wrap; /* Mencegah overflow */
@@ -699,6 +705,7 @@ body {
     max-width: 1100px;
     margin: auto;
     overflow: hidden; /* Sembunyikan bagian yang tidak terlihat */
+    padding-bottom: 10px;
 }
 
 .kajian-wrapper {
@@ -707,6 +714,7 @@ body {
     scroll-behavior: smooth;
     white-space: nowrap;
     -webkit-overflow-scrolling: touch; /* Supaya smooth di mobile */
+    padding-bottom: 10px;
 }
 
 .kajian-wrapper::-webkit-scrollbar {
@@ -747,11 +755,11 @@ body {
 }
 
 #prev {
-    left: 0px; /* Sesuaikan posisi */
+    left: 10px; /* Sesuaikan posisi */
 }
 
 #next {
-    right: 0px; /* Sesuaikan posisi */
+    right: 10px; /* Sesuaikan posisi */
 }
 
 .carousel-btn:hover {
@@ -761,7 +769,7 @@ body {
 /* Responsive untuk Mobile */
 @media (max-width: 768px) {
     .column1 {
-        flex: 0 0 calc(60% - 15px); /* Setiap kolom mengambil 50% dari lebar container pada layar kecil */
+        flex: 0 0 calc(0% - 15px); /* Setiap kolom mengambil 50% dari lebar container pada layar kecil */
     }
 
     .carousel-btn {

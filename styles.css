@@ -791,3 +791,13 @@ body {
         padding-left: 7.8%; /* Menambahkan ruang di kiri */
     }
 }
+
+.bungkus {
+    margin-top: 70px;
+}
+
+@media (max-width: 768px) {
+    .bungkus {
+        margin-top: 35px;
+    }
+}

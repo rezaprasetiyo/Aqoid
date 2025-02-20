@@ -215,7 +215,189 @@ nav ul li a.active {
     margin-bottom: 100px;
 }
 
-#kajian1 {
+#kajian1 {.kajian-carousel {
+    position: relative;
+    width: 100%;
+    max-width: 1100px;
+    margin: auto;
+    overflow: hidden; /* Sembunyikan bagian yang tidak terlihat */
+    padding-bottom: 10px;
+}
+
+.kajian-wrapper {
+    display: flex;
+    overflow-x: auto; /* Ubah dari hidden ke auto */
+    scroll-behavior: smooth;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch; /* Supaya smooth di mobile */
+    padding-bottom: 10px;
+}
+
+.kajian-wrapper::-webkit-scrollbar {
+    display: none; /* Sembunyikan scrollbar */
+}
+
+.kajian-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* Pastikan transisi lancar */
+    gap: 15px;
+}.kajian-carousel {
+    position: relative;
+    width: 100%;
+    max-width: 1100px;
+    margin: auto;
+    overflow: hidden; /* Sembunyikan bagian yang tidak terlihat */
+    padding-bottom: 10px;
+}
+
+.kajian-wrapper {
+    display: flex;
+    overflow-x: auto; /* Ubah dari hidden ke auto */
+    scroll-behavior: smooth;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch; /* Supaya smooth di mobile */
+    padding-bottom: 10px;
+}
+
+.kajian-wrapper::-webkit-scrollbar {
+    display: none; /* Sembunyikan scrollbar */
+}
+
+.kajian-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* Pastikan transisi lancar */
+    gap: 15px;
+}.kajian-carousel {
+    position: relative;
+    width: 100%;
+    max-width: 1100px;
+    margin: auto;
+    overflow: hidden; /* Sembunyikan bagian yang tidak terlihat */
+    padding-bottom: 10px;
+}
+
+.kajian-wrapper {
+    display: flex;
+    overflow-x: auto; /* Ubah dari hidden ke auto */
+    scroll-behavior: smooth;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch; /* Supaya smooth di mobile */
+    padding-bottom: 10px;
+}
+
+.kajian-wrapper::-webkit-scrollbar {
+    display: none; /* Sembunyikan scrollbar */
+}
+
+.kajian-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* Pastikan transisi lancar */
+    gap: 15px;
+}.kajian-carousel {
+    position: relative;
+    width: 100%;
+    max-width: 1100px;
+    margin: auto;
+    overflow: hidden; /* Sembunyikan bagian yang tidak terlihat */
+    padding-bottom: 10px;
+}
+
+.kajian-wrapper {
+    display: flex;
+    overflow-x: auto; /* Ubah dari hidden ke auto */
+    scroll-behavior: smooth;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch; /* Supaya smooth di mobile */
+    padding-bottom: 10px;
+}
+
+.kajian-wrapper::-webkit-scrollbar {
+    display: none; /* Sembunyikan scrollbar */
+}
+
+.kajian-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* Pastikan transisi lancar */
+    gap: 15px;
+}.kajian-carousel {
+    position: relative;
+    width: 100%;
+    max-width: 1100px;
+    margin: auto;
+    overflow: hidden; /* Sembunyikan bagian yang tidak terlihat */
+    padding-bottom: 10px;
+}
+
+.kajian-wrapper {
+    display: flex;
+    overflow-x: auto; /* Ubah dari hidden ke auto */
+    scroll-behavior: smooth;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch; /* Supaya smooth di mobile */
+    padding-bottom: 10px;
+}
+
+.kajian-wrapper::-webkit-scrollbar {
+    display: none; /* Sembunyikan scrollbar */
+}
+
+.kajian-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* Pastikan transisi lancar */
+    gap: 15px;
+}.kajian-carousel {
+    position: relative;
+    width: 100%;
+    max-width: 1100px;
+    margin: auto;
+    overflow: hidden; /* Sembunyikan bagian yang tidak terlihat */
+    padding-bottom: 10px;
+}
+
+.kajian-wrapper {
+    display: flex;
+    overflow-x: auto; /* Ubah dari hidden ke auto */
+    scroll-behavior: smooth;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch; /* Supaya smooth di mobile */
+    padding-bottom: 10px;
+}
+
+.kajian-wrapper::-webkit-scrollbar {
+    display: none; /* Sembunyikan scrollbar */
+}
+
+.kajian-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* Pastikan transisi lancar */
+    gap: 15px;
+}.kajian-carousel {
+    position: relative;
+    width: 100%;
+    max-width: 1100px;
+    margin: auto;
+    overflow: hidden; /* Sembunyikan bagian yang tidak terlihat */
+    padding-bottom: 10px;
+}
+
+.kajian-wrapper {
+    display: flex;
+    overflow-x: auto; /* Ubah dari hidden ke auto */
+    scroll-behavior: smooth;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch; /* Supaya smooth di mobile */
+    padding-bottom: 10px;
+}
+
+.kajian-wrapper::-webkit-scrollbar {
+    display: none; /* Sembunyikan scrollbar */
+}
+
+.kajian-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* Pastikan transisi lancar */
+    gap: 15px;
+}
     margin-top: 19px;
     margin-bottom: 250px;
     background-color: transparent;
@@ -225,6 +407,13 @@ nav ul li a.active {
 #kontak {
     margin-top: 70px;
     margin-bottom: 250px;
+}
+
+@media (max-width: 768px) {
+    #kontak {
+        margin-bottom: 70px;
+    }
+    
 }
 
 /* Styling Form */
@@ -401,7 +590,7 @@ h2 {
         margin-top: 10px;
     }
     #kajian1 {
-        margin-top: 10px; !important
+        margin-top: 10px !important; 
     }
 }
 
@@ -444,7 +633,7 @@ h2 {
 
     }
     #kajian1 {
-        margin-top: 10px; !important
+        margin-top: 10px !important;
     }
 }
 
@@ -527,8 +716,8 @@ h2 {
 
 .kjian {
     text-align: center;
-    margin-top: 30px; !important
-}
+    margin-top: 30px !important
+}; 
 
 .pertanyaan {
     text-align: center;
@@ -799,5 +988,30 @@ body {
 @media (max-width: 768px) {
     .bungkus {
         margin-top: 35px;
+    }
+}
+.indicators {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.dot {
+    height: 12px;
+    width: 12px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: #333;
+}
+
+@media (max-width: 768px) {
+    .kajian-carousel {
+        margin-bottom: 225px !important; 
     }
 }
